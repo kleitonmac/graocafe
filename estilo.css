@@ -280,3 +280,23 @@ footer {
 .cafe p {
     margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .seu-elemento {
+    max-height: 400px; /* Ajuste conforme necessário */
+  }
+}
+
+/* Definindo o max-height para tablets (telas entre 769px e 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .seu-elemento {
+    max-height: 600px; /* Ajuste conforme necessário */
+  }
+}
+
+
+@media screen and (min-width: 1025px) {
+  .seu-elemento {
+    max-height: 800px; /* Ajuste conforme necessário */
+  }
+}
