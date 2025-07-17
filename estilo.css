@@ -38,6 +38,61 @@
   background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.99) 85%);
 }
 
+
+
+.mapa-responsivo {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+}
+
+.mapa-responsivo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Ajustes para o modal em si */
+.modal {
+  background: transparent;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.mascara-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+
 section {
   padding: 3rem 2rem;
   margin: 0 auto;
@@ -84,7 +139,11 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 4rem 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 6rem 2rem 2rem 2rem;
+  gap: 2rem;
+  text-align: center;
 }
 
 .caixa-principal div {
@@ -504,3 +563,4 @@ footer {
     color: #333;
   }
 }
+
