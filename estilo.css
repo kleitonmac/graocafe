@@ -191,14 +191,18 @@ section {
 
 
 .mascara-modal {
-    visibility: visible; /* Certifique-se de que a máscara seja visível ao abrir o modal */
-    z-index: 3;
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  visibility: visible;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
 }
+
 
 footer {
   text-align: center;
@@ -328,5 +332,131 @@ footer {
 
   .cafe p {
     font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-width: none;
+    padding: 15px;
+  }
+
+  .caixa-principal {
+    padding: 6rem 2rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .caixa-principal div h3 {
+    font-size: 4rem;
+  }
+
+  .caixa-principal div p {
+    font-size: 1.6rem;
+  }
+
+  .titulo {
+    font-size: 3rem;
+  }
+
+  .cafe p {
+    font-size: 1.4rem;
+  }
+
+  .header section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header section nav a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+
+  .cafes {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cafe {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .footer-endereco {
+    word-break: break-word;
+    text-align: center;
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .caixa-principal div h3 {
+    font-size: 3rem;
+  }
+
+  .caixa-principal div p {
+    font-size: 1.4rem;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .header section nav a {
+    font-size: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 2.4rem;
+  }
+
+  .cafe p {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+
+  .footer-endereco {
+    font-size: 1.2rem;
+    padding: 10px;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .avaliacoes {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    max-width: 500px;
+  }
+
+  .caixa-principal div h3 {
+    font-size: 7rem;
+  }
+
+  .caixa-principal div p {
+    font-size: 2.2rem;
+  }
+
+  .titulo {
+    font-size: 5rem;
+  }
+
+  .cafe p {
+    font-size: 1.6rem;
   }
 }
