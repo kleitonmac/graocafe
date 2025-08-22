@@ -38,3 +38,20 @@ function scrollAvaliacoes(direction) {
     });
   }
 }
+
+function scrollAvaliacoes(direction) {
+  const container = document.querySelector('.menu-wrapper');
+  const scrollAmount = 400; // Largura de aproximadamente 1 card + gap
+  
+  if (direction === 'left') {
+    container.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+  } else {
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+}
