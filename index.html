@@ -286,33 +286,104 @@
 
 
                     <section class="avaliacoes">
-                        <h2>Avaliações dos Clientes</h2>
+                        <h3 class="titulo"><span>Avaliações</span> dos Clientes</h3>
+                        <p class="subtitulo-avaliacoes">O que nossos clientes dizem sobre a experiência Grão & Aroma</p>
 
-                        <div id="avaliacao" class="avaliacao">
-                            <a href="#avaliacao"></a>
+                        <div class="avaliacoes-wrapper">
+                            <button class="nav-btn prev-btn" onclick="scrollAvaliacoes('left')">‹</button>
+                            <div id="avaliacao" class="avaliacoes-container">
+                                <a href="#avaliacao"></a>
 
-                            <div class="avaliacao">
+                                <div class="avaliacao-card">
+                                    <div class="avaliacao-header">
+                                        <img class="foto-cliente" src="./assets/pic-1.png" alt="Foto de Rafael Mendes">
+                                        <div class="info-cliente">
+                                            <p class="nome-cliente">Rafael Mendes</p>
+                                            <div class="estrelas">★★★★★</div>
+                                            <p class="data-avaliacao">Há 1 Dia</p>
+                                        </div>
+                                    </div>
+                                    <div class="avaliacao-conteudo">
+                                        <p class="comentario">"Como apreciador de café, posso dizer que a Grão & Aroma realmente se destaca. O Cold Brew é excepcional - suave e com notas complexas. Os preços são justos para a qualidade oferecida. Recomendo fortemente!"</p>
+                                    </div>
+                                </div>
 
-                                <img class="foto" src="./assets/pic-3.png" alt="Foto de João Silva">
-                                <div>
-                                    <p class="nome">João Silva</p>
-                                    <p>"Ótimo atendimento! Super recomendo."</p>
+                                <div class="avaliacao-card">
+                                    <div class="avaliacao-header">
+                                        <img class="foto-cliente" src="./assets/pic-2.png" alt="Foto de Juliana Santos">
+                                        <div class="info-cliente">
+                                            <p class="nome-cliente">Juliana Santos</p>
+                                            <div class="estrelas">★★★★★</div>
+                                            <p class="data-avaliacao">Há 3 dias</p>
+                                        </div>
+                                    </div>
+                                    <div class="avaliacao-conteudo">
+                                        <p class="comentario">"Adorei o Caramel Macchiato! O caramelo não é muito doce e combina perfeitamente com o café. O croissant também é delicioso e sempre fresquinho. Ambiente perfeito para trabalhar ou relaxar."</p>
+                                    </div>
+                                </div>
+
+                                <div class="avaliacao-card">
+                                    <div class="avaliacao-header">
+                                        <img class="foto-cliente" src="./assets/pic-3.png" alt="Foto de Pedro Oliveira">
+                                        <div class="info-cliente">
+                                            <p class="nome-cliente">Pedro Oliveira</p>
+                                            <div class="estrelas">★★★★★</div>
+                                            <p class="data-avaliacao">Há 5 dias</p>
+                                        </div>
+                                    </div>
+                                    <div class="avaliacao-conteudo">
+                                        <p class="comentario">"O Mocha Especial é minha bebida favorita! O chocolate belga dá um toque sofisticado. A equipe é muito profissional e sempre me recebe com um sorriso. Preços acessíveis para uma qualidade premium."</p>
+                                    </div>
+                                </div>
+
+                                <div class="avaliacao-card">
+                                    <div class="avaliacao-header">
+                                        <img class="foto-cliente" src="./assets/pic-4.png" alt="Foto de Camila Ferreira">
+                                        <div class="info-cliente">
+                                            <p class="nome-cliente">Camila Ferreira</p>
+                                            <div class="estrelas">★★★★★</div>
+                                            <p class="data-avaliacao">Há 1 dia</p>
+                                        </div>
+                                    </div>
+                                    <div class="avaliacao-conteudo">
+                                        <p class="comentario">"Primeira vez aqui e fiquei impressionada! O Vanilla Latte tem o sabor perfeito de baunilha, nem muito forte nem fraco. O bolo de chocolate é caseiro e delicioso. Voltarei com certeza!"</p>
+                                    </div>
+                                </div>
+
+                                <div class="avaliacao-card">
+                                    <div class="avaliacao-header">
+                                        <img class="foto-cliente" src="./assets/pic-1.png" alt="Foto de Lucas Silva">
+                                        <div class="info-cliente">
+                                            <p class="nome-cliente">Lucas Silva</p>
+                                            <div class="estrelas">★★★★★</div>
+                                            <p class="data-avaliacao">Há 4 dias</p>
+                                        </div>
+                                    </div>
+                                    <div class="avaliacao-conteudo">
+                                        <p class="comentario">"O Hazelnut Cappuccino é incrível! O sabor de avelã é natural e não artificial. O café é sempre servido na temperatura ideal. Ambiente limpo e organizado. Super recomendo!"</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="avaliacao">
-                                <img class="foto" src="./assets/pic-2.png" alt="Foto de Maria Oliveira">
-                                <div>
-                                    <p class="nome">Maria Oliveira</p>
-                                    <p>"Sem Dúvidas o melhor café da região."</p>
-                                </div>
+                            <button class="nav-btn next-btn" onclick="scrollAvaliacoes('right')">›</button>
+                        </div>
+
+                        <div class="estatisticas-avaliacoes">
+                            <div class="estatistica">
+                                <h4>4.9</h4>
+                                <p>Avaliação Média</p>
+                                <div class="estrelas-grandes">★★★★★</div>
                             </div>
-                            <div class="avaliacao">
-                                <img class="foto" src="./assets/pic-1.png" alt="Foto de Carlos Santos">
-                                <div>
-                                    <p class="nome">Carlos Santos</p>
-                                    <p>"Muito satisfeito com o café, voltarei sempre!"</p>
-                                </div>
+                            <div class="estatistica">
+                                <h4>1.2k+</h4>
+                                <p>Avaliações</p>
+                                <p class="subtexto">Clientes Satisfeitos</p>
                             </div>
+                            <div class="estatistica">
+                                <h4>98%</h4>
+                                <p>Recomendam</p>
+                                <p class="subtexto">Nossa Cafeteria</p>
+                            </div>
+                        </div>
                     </section>
 
 

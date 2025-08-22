@@ -274,31 +274,194 @@ footer {
 }
 
 .avaliacoes {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-  padding: 50px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: #f9f9f9;
+  padding: 4rem 2rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
 }
 
-.avaliacao {
+.subtitulo-avaliacoes {
+  text-align: center;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.avaliacoes-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.avaliacoes-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.avaliacoes-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+  margin-bottom: 4rem;
 }
 
-.foto {
+.nav-btn {
+  background: var(--main-color);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.nome {
+.nav-btn:hover {
+  background: #b8945f;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+.avaliacao-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 350px;
+  flex-shrink: 0;
+}
+
+.avaliacao-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.avaliacao-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.15);
+}
+
+.avaliacao-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.foto-cliente {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--main-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.info-cliente {
+  flex: 1;
+}
+
+.nome-cliente {
+  color: #fff;
+  font-size: 1.6rem;
   font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.estrelas {
+  color: #ffd700;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.data-avaliacao {
+  color: rgba(255,255,255,0.6);
+  font-size: 1.2rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.avaliacao-conteudo {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+}
+
+.comentario {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Estatísticas das avaliações */
+.estatisticas-avaliacoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.estatistica {
+  text-align: center;
+  color: #fff;
+}
+
+.estatistica h4 {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin: 0;
+  font-weight: bold;
+}
+
+.estatistica p {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: rgba(255,255,255,0.9);
+}
+
+.subtexto {
+  font-size: 1.2rem !important;
+  color: rgba(255,255,255,0.6) !important;
+  font-style: italic;
+}
+
+.estrelas-grandes {
+  color: #ffd700;
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
 .menu {
@@ -462,6 +625,56 @@ footer {
 
   .cafe-preco {
     font-size: 1.4rem;
+  }
+
+  .avaliacoes-container {
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .avaliacao-card {
+    min-width: 280px;
+    padding: 1.5rem;
+  }
+
+  .avaliacao-card {
+    padding: 1.5rem;
+  }
+
+  .foto-cliente {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nome-cliente {
+    font-size: 1.4rem;
+  }
+
+  .comentario {
+    font-size: 1.3rem;
+  }
+
+  .estatisticas-avaliacoes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .estatistica h4 {
+    font-size: 2.5rem;
+  }
+
+  .estatistica p {
+    font-size: 1.3rem;
+  }
+
+  .avaliacoes-wrapper {
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
   }
 }
 
