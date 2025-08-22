@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="stylesheet" href="estilo.css">
+    </Link>
+    <link rel="icon" type="image/png"
+        href="https://images.icon-icons.com/591/PNG/512/barista-icons_coffee-shop-sign_icon-icons.com_55423.png">
+    <title>Grão & Aroma ☕🌿</title>
+</head>
+<div id="inicio" class="inicio">
+    <a href="#inicio">
+
+        <body>
+
+            <div class="caixa-video">
+                <video src="./videos/cafe.mp4" loop muted autoplay></video>
+                <div class="mascara"></div>
+            </div>
+
+            <header class="header">
+
+                <section>
+                    <a href="#">
+                        <img src="./assets/logo.png" alt="logo-cafeteria">
+                    </a>
+
+                    <nav>
+                        <a href="#inicio">Inicio</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#avaliacao">Avaliações</a>
+                        <a href="#" onclick="mostrarModal()"" >Endereço</a>
+                    </nav>
+                </section>
+            </header>
+                <section class=" caixa-principal">
+                            <div>
+                                <h3>Bem-vindo à Grão & Aroma – Onde Cada Xícara Conta uma História! ☕✨</h3>
+                                <p>Grão & Aroma ☕🌿
+
+                                    com melhor café da região</p>
+                                <a class="botao-link">Pegue o seu Agora</a>
+                            </div>
+                </section>
+
+
+                <section class="menu">
+                    <h3 class="titulo"><span>Nosso</span> Cardápio</h3>
+
+                    <div id="menu" class="menu">
+                        <a href="#menu"></a>
+
+                        <!-- CAFÉS QUENTES -->
+                        <div class="categoria-menu">
+                            <h4>☕ Cafés Quentes</h4>
+                            <div class="cafes">
+                                <ul class="cafe-list">
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-1.png" alt="Café Espresso">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Espresso Tradicional</strong></p>
+                                                <p class="cafe-descricao">Café puro e intenso, extraído sob pressão</p>
+                                                <p class="cafe-preco"><strong>R$ 8,50</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-2.png" alt="Cappuccino">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Cappuccino Clássico</strong></p>
+                                                <p class="cafe-descricao">Espresso, leite vaporizado e espuma cremosa</p>
+                                                <p class="cafe-preco"><strong>R$ 12,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-3.png" alt="Café Latte">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Latte Artesanal</strong></p>
+                                                <p class="cafe-descricao">Espresso suave com leite cremoso</p>
+                                                <p class="cafe-preco"><strong>R$ 13,50</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-4.png" alt="Mocha">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Mocha Especial</strong></p>
+                                                <p class="cafe-descricao">Espresso, chocolate belga e leite vaporizado</p>
+                                                <p class="cafe-preco"><strong>R$ 16,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-5.png" alt="Macchiato">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Macchiato</strong></p>
+                                                <p class="cafe-descricao">Espresso com uma "mancha" de leite</p>
+                                                <p class="cafe-preco"><strong>R$ 9,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-6.png" alt="Americano">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Americano</strong></p>
+                                                <p class="cafe-descricao">Espresso diluído em água quente</p>
+                                                <p class="cafe-preco"><strong>R$ 10,50</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- CAFÉS GELADOS -->
+                        <div class="categoria-menu">
+                            <h4>🧊 Cafés Gelados</h4>
+                            <div class="cafes">
+                                <ul class="cafe-list">
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-6.png" alt="Café Gelado">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Iced Latte</strong></p>
+                                                <p class="cafe-descricao">Espresso gelado com leite frio</p>
+                                                <p class="cafe-preco"><strong>R$ 14,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-1.png" alt="Café Gelado">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Cold Brew</strong></p>
+                                                <p class="cafe-descricao">Café extraído a frio por 24h</p>
+                                                <p class="cafe-preco"><strong>R$ 15,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-4.png" alt="Mocha Gelado">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Iced Mocha</strong></p>
+                                                <p class="cafe-descricao">Mocha gelado com chantilly</p>
+                                                <p class="cafe-preco"><strong>R$ 17,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ESPECIALIDADES -->
+                        <div class="categoria-menu">
+                            <h4>🌟 Especialidades da Casa</h4>
+                            <div class="cafes">
+                                <ul class="cafe-list">
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-2.png" alt="Café Especial">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Caramel Macchiato</strong></p>
+                                                <p class="cafe-descricao">Espresso, leite vaporizado e caramelo</p>
+                                                <p class="cafe-preco"><strong>R$ 18,50</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-3.png" alt="Café Especial">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Vanilla Latte</strong></p>
+                                                <p class="cafe-descricao">Latte com essência de baunilha</p>
+                                                <p class="cafe-preco"><strong>R$ 16,50</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-4.png" alt="Café Especial">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Hazelnut Cappuccino</strong></p>
+                                                <p class="cafe-descricao">Cappuccino com sabor de avelã</p>
+                                                <p class="cafe-preco"><strong>R$ 17,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ACOMPANHAMENTOS -->
+                        <div class="categoria-menu">
+                            <h4>🥐 Acompanhamentos</h4>
+                            <div class="cafes">
+                                <ul class="cafe-list">
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-1.png" alt="Croissant">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Croissant Tradicional</strong></p>
+                                                <p class="cafe-descricao">Croissant francês artesanal</p>
+                                                <p class="cafe-preco"><strong>R$ 8,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-2.png" alt="Bolo">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Bolo de Chocolate</strong></p>
+                                                <p class="cafe-descricao">Fatia de bolo caseiro</p>
+                                                <p class="cafe-preco"><strong>R$ 12,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cafe">
+                                            <img src="./assets/menu-3.png" alt="Cookie">
+                                            <div class="cafe-info">
+                                                <p class="cafe-nome"><strong>Cookie de Chocolate</strong></p>
+                                                <p class="cafe-descricao">Cookie artesanal com gotas de chocolate</p>
+                                                <p class="cafe-preco"><strong>R$ 6,90</strong></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                     
+                        </div>
+                </section>
+
+
+                <section class="caixa-sobre">
+                    <h3 class="titulo"><span>Sobre</span> Nós</h3>
+
+                    <section id="sobre" class="sobre">
+                        <a href="#sobre">
+                        </a>
+
+                        <div class="sobre-container">
+                            <div class="sobre-imagem">
+                                <img src="./assets/about-img.jpg">
+                            </div>
+                            <div class="sobre-texto">
+                                <h3>O que faz nosso café especial</h3>
+                                <p> Não é apenas o sabor. É a experiência. 🌿✨
+
+                                    🔥 Grãos selecionados de alta qualidade</p>
+                                <p>Origem sustentável e torra artesanal
+                                    💛 Aroma irresistível e sabor incomparável
+
+                                    Venha descobrir o que torna cada xícara única! 📍 Visite-nos e sinta a diferença.
+
+                                    #CaféEspecial #SaborÚnico #ExperiênciaPerfeita</p>
+                                <a class="botao-link">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="modal">
+  <button onclick="esconderModal()" aria-label="Fechar modal" class="fechar-modal">✖</button>
+  <h3 class="titulo"><span>Nosso</span> Endereço</h3>
+  <div class="mapa-responsivo">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9207294.594065202!2d-55.092118799999994!3d-23.548367299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66fabf62f28d%3A0xfebdb43385a1f43a!2sMania%20de%20Caf%C3%A9!5e1!3m2!1spt-BR!2sbr!4v1743053991394!5m2!1spt-BR!2sbr"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
+<div class="mascara-modal" onclick="esconderModal()"></div>
+
+
+                    <section class="avaliacoes">
+                        <h2>Avaliações dos Clientes</h2>
+
+                        <div id="avaliacao" class="avaliacao">
+                            <a href="#avaliacao"></a>
+
+                            <div class="avaliacao">
+
+                                <img class="foto" src="./assets/pic-3.png" alt="Foto de João Silva">
+                                <div>
+                                    <p class="nome">João Silva</p>
+                                    <p>"Ótimo atendimento! Super recomendo."</p>
+                                </div>
+                            </div>
+                            <div class="avaliacao">
+                                <img class="foto" src="./assets/pic-2.png" alt="Foto de Maria Oliveira">
+                                <div>
+                                    <p class="nome">Maria Oliveira</p>
+                                    <p>"Sem Dúvidas o melhor café da região."</p>
+                                </div>
+                            </div>
+                            <div class="avaliacao">
+                                <img class="foto" src="./assets/pic-1.png" alt="Foto de Carlos Santos">
+                                <div>
+                                    <p class="nome">Carlos Santos</p>
+                                    <p>"Muito satisfeito com o café, voltarei sempre!"</p>
+                                </div>
+                            </div>
+                    </section>
+
+
+                    <footer>
+                        <p> 2021 Grão & Aroma. Todos os direitos reservados.</p>
+                    </footer>
+                    <script src="script.js"></script>
+        </body>
+
+</html>
