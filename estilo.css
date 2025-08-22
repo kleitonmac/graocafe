@@ -300,6 +300,8 @@ footer {
   scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  -webkit-overflow-scrolling: touch; /* Melhor scroll no iOS */
+  scroll-snap-type: x mandatory; /* Snap para cards */
 }
 
 .avaliacoes-container::-webkit-scrollbar {
@@ -312,6 +314,27 @@ footer {
   align-items: center;
   gap: 1rem;
   margin-bottom: 4rem;
+}
+
+/* Indicadores de scroll para mobile */
+.avaliacoes-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .avaliacoes-wrapper::after {
+    opacity: 1;
+  }
 }
 
 .nav-btn {
@@ -329,6 +352,10 @@ footer {
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent; /* Remove highlight no iOS */
+  touch-action: manipulation; /* Otimiza para touch */
+  min-height: 44px; /* Tamanho mínimo para acessibilidade */
+  min-width: 44px;
 }
 
 .nav-btn:hover {
@@ -350,6 +377,8 @@ footer {
   backdrop-filter: blur(10px);
   min-width: 350px;
   flex-shrink: 0;
+  scroll-snap-align: start; /* Snap para cards */
+  touch-action: pan-y; /* Permite scroll vertical dentro do card */
 }
 
 .avaliacao-card {
@@ -804,47 +833,180 @@ footer {
   }
 }
 
+/* Responsividade para Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .avaliacoes-container {
+    gap: 1.5rem;
+  }
+
+  .avaliacao-card {
+    min-width: 320px;
+    padding: 1.8rem;
+  }
+
+  .foto-cliente {
+    width: 55px;
+    height: 55px;
+  }
+
+  .nome-cliente {
+    font-size: 1.5rem;
+  }
+
+  .comentario {
+    font-size: 1.35rem;
+  }
+
+  .estatisticas-avaliacoes {
+    gap: 2.5rem;
+  }
+
+  .estatistica h4 {
+    font-size: 2.8rem;
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsividade para Dispositivos Móveis */
 @media (max-width: 768px) {
   .avaliacoes {
-    padding: 20px;
-    margin: 20px 10px;
-    border-width: 1px;
-    background: #fff; /* Melhor contraste para leitura em celular */
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+    background: rgba(0,0,0,0.3);
   }
 
-  .avaliacao {
+  .subtitulo-avaliacoes {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .avaliacoes-wrapper {
+    gap: 0.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .avaliacoes-container {
+    gap: 1rem;
+    padding: 0.3rem 0;
+  }
+
+  .avaliacao-card {
+    min-width: 260px;
+    padding: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .avaliacao-header {
+    margin-bottom: 1rem;
+    gap: 0.8rem;
+  }
+
+  .foto-cliente {
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+  }
+
+  .nome-cliente {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .estrelas {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .data-avaliacao {
+    font-size: 1rem;
+  }
+
+  .avaliacao-conteudo {
+    padding-top: 1rem;
+  }
+
+  .comentario {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .estatisticas-avaliacoes {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 0;
+    gap: 1.2rem;
+    padding: 1.5rem;
   }
 
-  .foto {
-    width: 40px;
-    height: 40px;
+  .estatistica h4 {
+    font-size: 2.2rem;
   }
 
-  .nome {
+  .estatistica p {
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+  }
+
+  .subtexto {
+    font-size: 1rem !important;
+  }
+
+  .estrelas-grandes {
+    font-size: 1.6rem;
+    margin-top: 0.3rem;
+  }
+
+  .nav-btn {
+    width: 35px;
+    height: 35px;
     font-size: 1.4rem;
   }
 }
 
+/* Responsividade para Dispositivos Muito Pequenos */
 @media (max-width: 480px) {
   .avaliacoes {
-    padding: 15px;
+    padding: 1.5rem 0.5rem;
+    margin: 1rem 0.5rem;
   }
 
-  .avaliacao {
-    padding: 8px 0;
+  .avaliacao-card {
+    min-width: 240px;
+    padding: 1rem;
   }
 
-  .nome {
-    font-size: 1.3rem;
+  .foto-cliente {
+    width: 40px;
+    height: 40px;
   }
 
-  .avaliacao p {
+  .nome-cliente {
     font-size: 1.2rem;
-    color: #333;
+  }
+
+  .comentario {
+    font-size: 1.1rem;
+  }
+
+  .nav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .estatisticas-avaliacoes {
+    padding: 1rem;
+  }
+
+  .estatistica h4 {
+    font-size: 2rem;
+  }
+
+  .estatistica p {
+    font-size: 1.1rem;
   }
 }
 
