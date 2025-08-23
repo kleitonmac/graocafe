@@ -310,11 +310,12 @@ footer {
 
 .avaliacoes-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden; /* esconde os cards fora da área */
 }
+
 
 /* Indicadores de scroll para mobile */
 .avaliacoes-wrapper::after {
@@ -1010,3 +1011,21 @@ footer {
   }
 }
 
+
+.avaliacoes-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.avaliacao-card {
+  flex: 0 0 50%; /* padrão: 2 cards por vez */
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+/* Responsivo: em telas menores, mostra só 1 card */
+@media (max-width: 768px) {
+  .avaliacao-card {
+    flex: 0 0 100%;
+  }
+}

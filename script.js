@@ -21,37 +21,34 @@ function esconderModal() {
   caixaPrincipal.style.visibility = 'visible';
 }
 
-// Função para navegar pelas avaliações
+
 function scrollAvaliacoes(direction) {
   const container = document.querySelector('.avaliacoes-container');
-  const scrollAmount = 400; // Largura de aproximadamente 1 card + gap
-  
+  const card = container.querySelector('.avaliacao-card');
+
+  if (!container || !card) return;
+
+  const cardWidth = card.offsetWidth + 16; // largura + gap (ajuste se necessário)
+  const scrollAmount = cardWidth * 2; // rola 2 cards por vez
+
   if (direction === 'left') {
-    container.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth'
-    });
+    if (container.scrollLeft === 0) {
+      // Se está no início e clicou "esquerda", vai para o final
+      container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
   } else {
-    container.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 5) {
+      // Se chegou no fim, volta para o início
+      container.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
   }
 }
 
-function scrollAvaliacoes(direction) {
-  const container = document.querySelector('.menu-wrapper');
-  const scrollAmount = 400; // Largura de aproximadamente 1 card + gap
-  
-  if (direction === 'left') {
-    container.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth'
-    });
-  } else {
-    container.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-}
+// Auto-play a cada 4s (rolando 2 cards)
+setInterval(() => {
+  scrollAvaliacoes('right');
+}, 4000);
